@@ -3,53 +3,113 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>playmismade</title>
-<meta name="description" content="playmismade is an independent game studio making [GENRE] games.">
-<meta property="og:title" content="playmismade | Indie Game Studio">
-<meta property="og:description" content="playmismade is an independent game studio making [GENRE] games.">
+<title>playmismade | Indie game studio, makers of MISMADE</title>
+<meta name="description" content="playmismade is an independent game studio in Florida, USA. Our first game, MISMADE, is a low-poly necromancy sandbox with 1-4 player online co-op.">
+<link rel="canonical" href="https://playmismade.com/">
+<link rel="icon" type="image/png" href="img/icon.png">
+<meta property="og:title" content="playmismade | Makers of MISMADE">
+<meta property="og:description" content="Raise the dead. Stitch them wrong. MISMADE is a co-op necromancy sandbox from indie studio playmismade.">
 <meta property="og:type" content="website">
-<meta name="theme-color" content="#0e1116">
+<meta property="og:url" content="https://playmismade.com/">
+<meta property="og:image" content="https://playmismade.com/img/og.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#0a1218">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "name": "playmismade",
+      "url": "https://playmismade.com/",
+      "logo": "https://playmismade.com/img/icon.png",
+      "founder": { "@type": "Person", "name": "Nick Murrah" },
+      "address": { "@type": "PostalAddress", "addressRegion": "FL", "addressCountry": "US" },
+      "sameAs": [
+        "https://www.tiktok.com/@play_mismade",
+        "https://www.instagram.com/play_mismade/",
+        "https://discord.gg/xumMFkxEw"
+      ]
+    },
+    {
+      "@type": "VideoGame",
+      "name": "MISMADE",
+      "description": "A low-poly necromancy sandbox with 1-4 player online co-op. Raise an army, take towns, and stitch dug-up bodies together into creatures nobody designed.",
+      "genre": ["Sandbox", "Action RPG"],
+      "gamePlatform": "PC (Windows)",
+      "playMode": ["SinglePlayer", "CoOp"],
+      "image": "https://playmismade.com/img/og.jpg",
+      "publisher": { "@type": "Organization", "name": "playmismade" }
+    }
+  ]
+}
+</script>
 <style>
   :root{
-    --bg:#0e1116; --panel:#161b22; --line:#262d38; --text:#e8ecf2; --muted:#98a2b3;
-    --accent:#7c9cff; --accent-2:#a78bfa;
+    --bg:#0a1218; --panel:#101b24; --line:#1f3340; --text:#e9eef0; --muted:#93a7b0;
+    --accent:#5cf08a; --accent-2:#e8d9b0; --ink:#06120b;
   }
   @media (prefers-color-scheme: light){
-    :root{ --bg:#f7f8fb; --panel:#ffffff; --line:#e3e7ee; --text:#161a22; --muted:#5b6575; --accent:#3b5bdb; --accent-2:#7048e8; }
+    :root{ --bg:#f4f7f5; --panel:#ffffff; --line:#d9e3de; --text:#12201a; --muted:#52645c; --accent:#0f8f45; --accent-2:#7a5c1e; --ink:#ffffff; }
   }
   *{box-sizing:border-box}
   html{scroll-behavior:smooth}
   body{margin:0;background:var(--bg);color:var(--text);font:16px/1.6 system-ui,-apple-system,"Segoe UI",Roboto,sans-serif}
   a{color:var(--accent);text-decoration:none}
   a:hover{text-decoration:underline}
-  .wrap{max-width:880px;margin:0 auto;padding:0 20px}
+  img{max-width:100%;height:auto;display:block}
+  .wrap{max-width:960px;margin:0 auto;padding:0 20px}
   header.top{display:flex;justify-content:space-between;align-items:center;padding:20px 0}
   .logo{font-weight:800;letter-spacing:-.02em;font-size:1.15rem;color:var(--text)}
   nav a{margin-left:18px;color:var(--muted);font-size:.95rem}
   nav a:hover{color:var(--text);text-decoration:none}
-  .hero{padding:72px 0 48px}
-  .hero h1{font-size:clamp(2.2rem,6vw,3.6rem);line-height:1.08;letter-spacing:-.03em;margin:0 0 18px;
-    background:linear-gradient(90deg,var(--accent),var(--accent-2));-webkit-background-clip:text;background-clip:text;color:transparent}
-  .hero p{font-size:1.15rem;color:var(--muted);max-width:620px;margin:0 0 28px}
-  .btn{display:inline-block;padding:11px 20px;border-radius:10px;font-weight:600;border:1px solid var(--line);color:var(--text);background:var(--panel)}
-  .btn.primary{background:var(--accent);border-color:var(--accent);color:#fff}
-  .btn:hover{text-decoration:none;filter:brightness(1.08)}
-  section{padding:36px 0;border-top:1px solid var(--line)}
-  section h2{font-size:1.4rem;letter-spacing:-.01em;margin:0 0 6px}
+
+  .hero{position:relative;border-radius:18px;overflow:hidden;border:1px solid var(--line);margin:8px 0 0;background:#06101a}
+  .hero img{width:100%;aspect-ratio:16/9;object-fit:cover}
+  .hero .copy{position:absolute;inset:auto 0 0 0;padding:64px 28px 28px;
+    background:linear-gradient(to top,rgba(6,16,22,.94) 0%,rgba(6,16,22,.72) 55%,rgba(6,16,22,0) 100%);color:#e9eef0}
+  .hero h1{font-size:clamp(1.7rem,5vw,3rem);line-height:1.08;letter-spacing:-.02em;margin:0 0 10px}
+  .hero h1 em{font-style:normal;color:#5cf08a}
+  .hero p{margin:0 0 18px;max-width:560px;color:#c5d3d9;font-size:1.05rem}
+  @media (max-width:640px){
+    .hero .copy{position:static;padding:20px 18px 12px;background:#0a1218}
+    .hero p{font-size:.98rem}
+    nav a{margin-left:12px;font-size:.9rem}
+  }
+  .btn{display:inline-block;padding:11px 20px;border-radius:10px;font-weight:600;border:1px solid var(--line);color:var(--text);background:var(--panel);margin:0 8px 8px 0}
+  .hero .btn{background:rgba(255,255,255,.08);color:#e9eef0;border-color:rgba(255,255,255,.22)}
+  .btn.primary,.hero .btn.primary{background:var(--accent);border-color:var(--accent);color:var(--ink)}
+  .btn:hover{text-decoration:none;filter:brightness(1.1)}
+
+  section{padding:40px 0;border-top:1px solid var(--line);margin-top:40px}
+  section h2{font-size:1.5rem;letter-spacing:-.01em;margin:0 0 6px}
   section .sub{color:var(--muted);margin:0 0 22px}
   .grid{display:grid;gap:14px;grid-template-columns:repeat(auto-fill,minmax(250px,1fr))}
   .card{background:var(--panel);border:1px solid var(--line);border-radius:14px;padding:18px}
   .card h3{margin:0 0 6px;font-size:1.05rem}
   .card p{margin:0;color:var(--muted);font-size:.95rem}
-  .tag{display:inline-block;font-size:.75rem;padding:2px 9px;border-radius:99px;border:1px solid var(--line);color:var(--muted);margin-bottom:10px}
+  .tag{display:inline-block;font-size:.75rem;padding:2px 9px;border-radius:99px;border:1px solid var(--accent);color:var(--accent);margin-bottom:10px}
+  .facts{display:grid;gap:10px;grid-template-columns:repeat(auto-fit,minmax(170px,1fr));margin-top:20px}
+  .fact{background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:14px 16px}
+  .fact b{display:block;font-size:.78rem;color:var(--muted);text-transform:uppercase;letter-spacing:.06em;margin-bottom:2px}
+
+  .game{display:grid;gap:26px;grid-template-columns:1.1fr 1fr;align-items:start}
+  @media (max-width:760px){ .game{grid-template-columns:1fr} }
+  .game h3{font-size:1.8rem;margin:4px 0 8px;letter-spacing:-.02em}
+  .game p{margin:0 0 14px}
+  .game ul{margin:0 0 6px;padding-left:20px;color:var(--muted)}
+  .game li{margin:6px 0}
+  .game li b{color:var(--text);font-weight:600}
+  .shots{display:grid;gap:12px;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));margin-top:26px}
+  .shots figure{margin:0;border:1px solid var(--line);border-radius:12px;overflow:hidden;background:var(--panel)}
+  .shots figcaption{padding:9px 14px;color:var(--muted);font-size:.88rem}
+  .note{color:var(--muted);font-size:.88rem;margin-top:12px}
+
   .socials a{display:flex;align-items:center;justify-content:space-between;background:var(--panel);border:1px solid var(--line);
     border-radius:12px;padding:14px 16px;color:var(--text);font-weight:600}
   .socials a span{color:var(--muted);font-weight:400;font-size:.9rem}
   .socials a:hover{border-color:var(--accent);text-decoration:none}
-  .facts{display:grid;gap:10px;grid-template-columns:repeat(auto-fit,minmax(180px,1fr))}
-  .fact{background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:14px 16px}
-  .fact b{display:block;font-size:.8rem;color:var(--muted);text-transform:uppercase;letter-spacing:.06em;margin-bottom:2px}
-  footer{padding:32px 0 48px;color:var(--muted);font-size:.9rem;border-top:1px solid var(--line)}
+  footer{padding:32px 0 48px;color:var(--muted);font-size:.9rem;border-top:1px solid var(--line);margin-top:40px}
 </style>
 </head>
 <body>
@@ -59,7 +119,7 @@
     <a class="logo" href="#">playmismade</a>
     <nav>
       <a href="#about">About</a>
-      <a href="#work">Work</a>
+      <a href="#games">Game</a>
       <a href="#connect">Connect</a>
       <a href="#contact">Contact</a>
     </nav>
@@ -67,57 +127,81 @@
 
   <!-- HERO -->
   <div class="hero">
-    <h1>We make games.</h1>
-    <p>playmismade is an independent game studio building [GENRE] games for [PLATFORM: PC / mobile / web]. [One sentence on what makes your games different.]</p>
-    <a class="btn primary" href="#work">See our games</a>
-    <a class="btn" href="#connect">Follow along</a>
+    <img src="img/hero.jpg" width="1600" height="900" alt="The lich in the crypt's sanctum, standing in a glowing green summoning circle with a crew of mismatched skeletons">
+    <div class="copy">
+      <h1>Raise the dead. <em>Stitch them wrong.</em></h1>
+      <p>playmismade is an independent game studio. Our first game, MISMADE, is a low-poly necromancy sandbox with 1&ndash;4 player online co-op.</p>
+      <a class="btn primary" href="https://discord.gg/xumMFkxEw" target="_blank" rel="noopener">Join the Discord</a>
+      <a class="btn" href="#games">About the game</a>
+    </div>
   </div>
 
   <!-- ABOUT -->
   <section id="about">
     <h2>About</h2>
     <p class="sub">The short version.</p>
-    <p>playmismade is a game studio founded by Nick Murrah. [Two to three sentences: what kind of games you make, the vision behind them, and how you build (engine, tools, and any AI-assisted workflow). Keep it specific and factual.]</p>
-    <div class="facts" style="margin-top:20px">
+    <p>playmismade is a game studio founded by Nick Murrah in Florida, USA. We make games where the funniest moments come from systems colliding: bodies you drag home, creatures nobody designed, and a world that takes itself completely seriously while you don't. MISMADE is our first game, and it is in active development.</p>
+    <div class="facts">
       <div class="fact"><b>Founder</b>Nick Murrah</div>
-      <div class="fact"><b>Engine</b>[Unity / Unreal / Godot / other]</div>
-      <div class="fact"><b>Stage</b>[Prototype / Alpha / Beta / Released]</div>
       <div class="fact"><b>Based in</b>Florida, USA</div>
-      <div class="fact"><b>Started</b>[Month Year]</div>
+      <div class="fact"><b>Engine</b>Unity 6</div>
+      <div class="fact"><b>Platform</b>PC (Windows)</div>
+      <div class="fact"><b>Stage</b>In development, playable</div>
     </div>
   </section>
 
-  <!-- WORK -->
-  <section id="work">
-    <h2>Games</h2>
-    <p class="sub">Released and in development.</p>
-    <div class="grid">
-      <div class="card">
-        <span class="tag">[In development / Released]</span>
-        <h3>[Game title]</h3>
-        <p>[One-sentence pitch: genre, core mechanic, platform.] <a href="#">Play / trailer →</a></p>
+  <!-- GAME -->
+  <section id="games">
+    <h2>Our game</h2>
+    <p class="sub">In development. Not released yet.</p>
+    <div class="game">
+      <div>
+        <span class="tag">In development</span>
+        <h3>MISMADE</h3>
+        <p>You were the Court Necromancer of Murk until your own apprentice burned you, four hundred years ago, while the whole kingdom cheered. Now you are back: a lich with no spells, a leaky crypt, a floating skull for a mentor, and a grudge.</p>
+        <p>Raise an army, take the world town by town, and save the saint who did it for last.</p>
       </div>
       <div class="card">
-        <span class="tag">[In development / Released]</span>
-        <h3>[Game title]</h3>
-        <p>[One-sentence pitch: genre, core mechanic, platform.] <a href="#">Play / trailer →</a></p>
+        <h3>What you do</h3>
+        <ul>
+          <li><b>Raise the dead.</b> Dig up the graveyard, drag the bodies home and bring them back.</li>
+          <li><b>Build creatures nobody designed.</b> Take bodies apart on the Bone Slab and stitch the pieces back together.</li>
+          <li><b>Conquer towns.</b> Ring the bells, beat the militia and the captain, and the town is yours.</li>
+          <li><b>Play together.</b> 1&ndash;4 player online co-op, in first or third person.</li>
+          <li><b>Fight bosses</b> with an army of your own making.</li>
+        </ul>
       </div>
     </div>
+
+    <div class="shots">
+      <figure>
+        <img loading="lazy" src="img/army.jpg" width="1280" height="720" alt="A crowd of raised skeletons in a green-lit crypt, with a heap of bodies on the floor">
+        <figcaption>A crypt full of recruits.</figcaption>
+      </figure>
+      <figure>
+        <img loading="lazy" src="img/town-raid.jpg" width="1280" height="720" alt="Skeletons marching through a night-time town square past lit windows">
+        <figcaption>The army arrives in town.</figcaption>
+      </figure>
+      <figure>
+        <img loading="lazy" src="img/skull-spell.jpg" width="1280" height="720" alt="A giant glowing skull in a stormy sky, linked by a beam to a pink summoning circle on the ground">
+        <figcaption>A very large spell.</figcaption>
+      </figure>
+      <figure>
+        <img loading="lazy" src="img/black-hole.jpg" width="1280" height="720" alt="A black hole tearing the sky open, throwing lightning and debris at the player's staff">
+        <figcaption>Subtlety is optional.</figcaption>
+      </figure>
+    </div>
+    <p class="note">Screenshots are captured from the game as it is today. It is still being built, and things will change.</p>
   </section>
 
   <!-- SOCIALS -->
   <section id="connect">
     <h2>Connect</h2>
-    <p class="sub">Everywhere playmismade lives.</p>
+    <p class="sub">Clips, updates and the people playing.</p>
     <div class="grid socials">
-      <a href="https://youtube.com/@playmismade" rel="me noopener" target="_blank">YouTube <span>@playmismade →</span></a>
-      <a href="https://x.com/playmismade" rel="me noopener" target="_blank">X / Twitter <span>@playmismade →</span></a>
-      <a href="https://instagram.com/playmismade" rel="me noopener" target="_blank">Instagram <span>@playmismade →</span></a>
-      <a href="https://tiktok.com/@playmismade" rel="me noopener" target="_blank">TikTok <span>@playmismade →</span></a>
-      <a href="https://github.com/playmismade" rel="me noopener" target="_blank">GitHub <span>playmismade →</span></a>
-      <a href="https://discord.gg/YOUR-INVITE" rel="me noopener" target="_blank">Discord <span>Join →</span></a>
-      <a href="https://playmismade.itch.io" rel="me noopener" target="_blank">itch.io <span>playmismade →</span></a>
-      <a href="https://store.steampowered.com/developer/playmismade" rel="me noopener" target="_blank">Steam <span>Wishlist →</span></a>
+      <a href="https://www.tiktok.com/@play_mismade" rel="me noopener" target="_blank">TikTok <span>@play_mismade &rarr;</span></a>
+      <a href="https://www.instagram.com/play_mismade/" rel="me noopener" target="_blank">Instagram <span>@play_mismade &rarr;</span></a>
+      <a href="https://discord.gg/xumMFkxEw" rel="me noopener" target="_blank">Discord <span>Join the server &rarr;</span></a>
     </div>
   </section>
 
@@ -125,13 +209,15 @@
   <section id="contact">
     <h2>Contact</h2>
     <p class="sub">Press, partnerships, or questions.</p>
-    <p><a class="btn primary" href="mailto:you@yourdomain.com">you@yourdomain.com</a></p>
+    <p>The fastest way to reach us is the Discord server, or a direct message on Instagram or TikTok.</p>
+    <p><a class="btn primary" href="https://discord.gg/xumMFkxEw" target="_blank" rel="noopener">Message us on Discord</a></p>
   </section>
 
   <footer>
-    &copy; <script>document.write(new Date().getFullYear())</script> playmismade. All rights reserved.
+    &copy; <span id="y">2026</span> playmismade. All rights reserved. MISMADE is a work in progress.
   </footer>
 
 </div>
+<script>document.getElementById('y').textContent=new Date().getFullYear()</script>
 </body>
 </html>
